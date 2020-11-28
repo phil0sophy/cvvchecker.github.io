@@ -4,7 +4,7 @@
 require 'function.php';
 
 error_reporting(0);
-date_default_timezone_set('Asia/Jakarta');
+date_default_timezone_set('America/Los_Angeles');
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     extract($_POST);
@@ -185,7 +185,7 @@ curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username-session-$session:$password");
 curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate, br');
 curl_setopt($ch, CURLOPT_URL, 'https://payments.braintree-api.com/graphql');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, ' Add post field');
+curl_setopt($ch, CURLOPT_POSTFIELDS, ' POST https://payments.braintree-api.com/graphql');
 //// Short codes $cc $mes $ano $cvv $firstname $lastname $street $zip $phone $state $email/////////////////////
 $headers = array();
 $headers[] = 'Accept: */*';
@@ -210,7 +210,7 @@ curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username-session-$session:$password");
 //////////======= Socks Proxy
 //curl_setopt($ch, CURLOPT_PROXY, $proxy);
 curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate, br');
-curl_setopt($ch, CURLOPT_URL, '#######################');
+curl_setopt($ch, CURLOPT_URL, 'https://payments.sandbox.braintree-api.com/graphql');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, 'POST https://payments.sandbox.braintree-api.com/graphql');
 //// Short codes $cc $mes $ano $cvv $firstname $lastname $street $zip $phone $state $email/////////////////////
@@ -240,6 +240,6 @@ else {
 
 curl_close($ch);
 ob_flush();
-///////////////////////////////////Edited and modified by Reboot13////////////////////////
+/////////////////////////////////// FILTH900 // обезьяна#8888 ////////////////////////
 
 ?>
