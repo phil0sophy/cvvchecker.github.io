@@ -1,2 +1,2 @@
 # cvvchecker.github.io
-CVV Validity Checker
+VCC Validity Checker
