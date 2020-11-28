@@ -168,8 +168,8 @@ if($state=="Alabama"){ $state="AL";
 
 ///////////////////////////////////////////////////=========[Luminati Details]
 
-$username = 'username';
-$password = 'password';
+$username = 'lum-customer-hl_29f7bacd-zone-static-ip-181.214.208.175';
+$password = '9sd2wl0kpwm3';
 $port = 22225;
 $session = mt_rand();
 $super_proxy = 'zproxy.lum-superproxy.io';
